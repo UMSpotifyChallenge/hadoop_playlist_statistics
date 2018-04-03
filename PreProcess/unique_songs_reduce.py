@@ -11,7 +11,7 @@ total_pos = 0
 for line in sys.stdin:
 
 	data, count = line.split('\t',1)
-	cur_line, pos = data.rsplit('|',1)
+	cur_line, pos = data.rsplit('|||',1)
 	pos = float(pos)
 	count_i = int(count)
 
@@ -24,7 +24,7 @@ for line in sys.stdin:
 
 	else:
 		avg_normalized_pos = total_pos / float(current_count)
-		to_print = current_track + "|" + "{:4.3f}".format(avg_normalized_pos)
+		to_print = current_track + "|||" + "{:4.3f}".format(avg_normalized_pos)
 		print('{0}\t{1}'.format(to_print,str(current_count)))
 		total_pos = pos
 		current_count = count_i
