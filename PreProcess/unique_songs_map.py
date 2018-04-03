@@ -54,6 +54,6 @@ for line in sys.stdin:
 	if done == 1:
 		normalized_position = "{:4.3f}".format(float(pos / num_tracks))
 		to_print = [track_uri, track_name, artist_uri, artist_name, album_uri, album_name, normalized_position]
-		to_print_string = "|||".join(to_print)
+		to_print_string = "||JhB||".join(to_print)
 		print('{0}\t{1}'.format(to_print_string,one))
 		done = 0

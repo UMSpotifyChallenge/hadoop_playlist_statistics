@@ -7,7 +7,7 @@ one = "1"
 
 # Input comes from stdin
 for line in sys.stdin:
-	splitted = list(map(lambda s : s.strip(), line.split("|||")))
+	splitted = list(map(lambda s : s.strip(), line.split("||JhB||")))
 	track_uri = splitted[0].strip().replace("spotify:track:","")
 	track_name = splitted[1]
 	# artist_uri = splitted[2].strip().replace("spotify:artist:","")
