@@ -7,7 +7,7 @@ one = "1"
 
 # Input comes from stdin
 for line in sys.stdin:
-	# splitted = list(map(lambda s : s.strip(), line.split("|")))
+	splitted = list(map(lambda s : s.strip(), line.split("|")))
 	# track_uri = splitted[0]
 	# track_name = splitted[1]
 	artist_uri = splitted[2].strip().replace("spotify:artist:","")
@@ -20,5 +20,5 @@ for line in sys.stdin:
 	dic["name"] = artist_name
 	key = json.dumps(dic)
 	
-	print("{}\t{}", key, one)
+	print '%s\t%s' %  (key, one)
 	
