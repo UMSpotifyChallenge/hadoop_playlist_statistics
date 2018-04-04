@@ -19,7 +19,7 @@ for line in sys.stdin:
 	dic["uri"] = track_uri
 	dic["name"] = track_name
 	dic["album_uri"] = album_uri
-	key = json.dumps(dic)
+	value = json.dumps(dic)
 	
-	print '%s\t%s' %  (key, one)
+	print '%s\t%s' %  (track_uri, value)
 	

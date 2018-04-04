@@ -3,8 +3,6 @@
 import sys
 import json
 
-one = "1"
-
 # Input comes from stdin
 for line in sys.stdin:
 	splitted = list(map(lambda s : s.strip(), line.split("||JhB||")))
@@ -19,7 +17,7 @@ for line in sys.stdin:
 	dic["uri"] = album_uri
 	dic["name"] = album_name
 	dic["artist_uri"] = artist_uri
-	key = json.dumps(dic)
+	value = json.dumps(dic)
 	
-	print '%s\t%s' %  (key, one)
+	print '%s\t%s' %  (album_uri, value)
 	

@@ -18,7 +18,7 @@ for line in sys.stdin:
 	dic = {}
 	dic["uri"] = artist_uri
 	dic["name"] = artist_name
-	key = json.dumps(dic)
+	value = json.dumps(dic)
 	
-	print '%s\t%s' %  (key, one)
+	print '%s\t%s' %  (artist_uri, value)
 	
